@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BioAuth"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "A delightful Biometrics Authenticating framework written in Swift"
   s.description      = <<-DESC
                         A delightful Biometrics Authenticating framework for iOS platforms written in Swift.

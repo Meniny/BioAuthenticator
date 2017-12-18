@@ -27,7 +27,7 @@
 
 import Foundation
 
-enum BioReasonMessage: String {
+public enum BioReasonMessage: String {
     case `default` = "Authentication is needed to access your app."
     case lockout = "Too many failed attempts."
 }

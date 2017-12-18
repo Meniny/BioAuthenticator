@@ -87,6 +87,10 @@ public enum BioErrors {
         case .other:
             return "Did not find error code on LAError object."
         }
+        
+    }
+    public var localizedMessage: String? {
+        return NSLocalizedString(self.message, comment: "")
     }
 }
 

@@ -28,10 +28,10 @@ import Foundation
 import LocalAuthentication
 
 // success block
-public typealias AuthenticationSuccess = (() -> ())
+public typealias BioAuthSuccessClosure = (() -> ())
 
 // failure block
-public typealias AuthenticationFailure = ((BioErrors) -> ())
+public typealias BioAuthFailureClosure = ((BioErrors) -> ())
 
 open class BioAuthenticator: NSObject {
 
@@ -39,8 +39,8 @@ open class BioAuthenticator: NSObject {
         static let instance = BioAuthenticator()
     }
     
-    // this is the Swift way to do singletons
-    class var shared: BioAuthenticator {
+    /// this is the Swift way to do singletons
+    open class var shared: BioAuthenticator {
        return Static.instance
     }
 }
@@ -49,26 +49,43 @@ open class BioAuthenticator: NSObject {
 
 public extension BioAuthenticator {
     
-    // checks if Biometric Authentication is available on the device.
-    func isBiometricAuthenticationAvailable() -> Bool {
+    /// checks if Biometric Authentication (Touch ID or Face ID) is available on the device.
+    public var isBiometricAuthenticationAvailable: Bool {
         var error: NSError? = nil
         
-        if LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            return (error == nil)
+        let canEvaluate = LAContext().canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error)
+        return canEvaluate
+//        if canEvaluate {
+//            return (error == nil)
+//        }
+//        return false
+    }
+    
+    /// checks if FaceID is avaiable on device
+    public var isFaceIDAvailable: Bool {
+        let context = LAContext()
+        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            if #available(iOS 11.0, *) {
+                return (context.biometryType == .faceID)
+            }
         }
         return false
     }
     
-    // checks if Face ID is avaiable on device
-    public func isFaceIDAvailable() -> Bool {
-        if #available(iOS 11.0, *) {
-            return (LAContext().biometryType == .typeFaceID)
+    /// checks if TouchID is avaiable on device
+    public var isTouchIDAvailable: Bool {
+        let context = LAContext()
+        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            if #available(iOS 11.0, *) {
+                return (context.biometryType == .touchID)
+            }
+            return true
         }
         return false
     }
     
-    // Biometric authentication
-    func authenticateUserWithBioMetrics(reason: String = "", fallbackTitle: String? = "", cancelTitle: String? = "", success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
+    /// Biometric authentication (Touch ID or Face ID)
+    public func authenticateUserWithBioMetrics(reason: String = "", fallbackTitle: String? = "", cancelTitle: String? = "", success successBlock:@escaping BioAuthSuccessClosure, failure failureBlock: @escaping BioAuthFailureClosure) {
         
         let reasonString = reason.isEmpty ? BioAuthenticator.shared.defaultBiometricAuthenticationReason() : reason
         
@@ -81,11 +98,11 @@ public extension BioAuthenticator {
         }
         
         // evaluate policy
-        BioAuthenticator.shared.evaluate(policy: LAPolicy.deviceOwnerAuthenticationWithBiometrics, with: context, reason: reasonString, success: successBlock, failure: failureBlock)
+        BioAuthenticator.shared.evaluate(policy: LAPolicy.deviceOwnerAuthenticationWithBiometrics, context: context, reason: reasonString, success: successBlock, failure: failureBlock)
     }
     
-    // Passcode authentication
-    func authenticateUserWithPasscode(reason: String = "", cancelTitle: String? = "", success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
+    /// Passcode authentication
+    public func authenticateUserWithPasscode(reason: String = "", cancelTitle: String? = "", success successBlock: @escaping BioAuthSuccessClosure, failure failureBlock: @escaping BioAuthFailureClosure) {
         
         let reasonString = reason.isEmpty ? BioAuthenticator.shared.defaultPasscodeAuthenticationReason() : reason
         
@@ -97,16 +114,16 @@ public extension BioAuthenticator {
         }
         
         // evaluate policy
-        BioAuthenticator.shared.evaluate(policy: LAPolicy.deviceOwnerAuthentication, with: context, reason: reasonString, success: successBlock, failure: failureBlock)
+        BioAuthenticator.shared.evaluate(policy: LAPolicy.deviceOwnerAuthentication, context: context, reason: reasonString, success: successBlock, failure: failureBlock)
     }
 }
 
 // MARK:- evaluate policy
-extension BioAuthenticator {
+public extension BioAuthenticator {
    
-    func evaluate(policy: LAPolicy, with context: LAContext, reason: String, success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
+    public func evaluate(policy: LAPolicy, context ctx: LAContext, reason: String, success successBlock: @escaping BioAuthSuccessClosure, failure failureBlock: @escaping BioAuthFailureClosure) {
         
-        context.evaluatePolicy(policy, localizedReason: reason) { (success, err) in
+        ctx.evaluatePolicy(policy, localizedReason: reason) { (success, err) in
             if success { successBlock() }
             else {
                 let errorType = BioErrors(error: err as! LAError)
@@ -117,14 +134,14 @@ extension BioAuthenticator {
 }
 
 // MARK:- Get default messages
-extension BioAuthenticator {
+public extension BioAuthenticator {
     // get default bio authentication reason
-    func defaultBiometricAuthenticationReason() -> String {
+    public func defaultBiometricAuthenticationReason() -> String {
         return BioReasonMessage.default.rawValue
     }
     
     // get reason after too many failed attempts.
-    func defaultPasscodeAuthenticationReason() -> String {
+    public func defaultPasscodeAuthenticationReason() -> String {
         return BioReasonMessage.lockout.rawValue
     }
 }

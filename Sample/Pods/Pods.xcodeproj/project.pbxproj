@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0515240BAD322C83CF9782DA4346EC24 /* Pods-Sample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 630DD76D417453483F37DBAE838D5518 /* Pods-Sample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		155DF5827AC23FABE88E931D8BE1AA5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD9D79231A21743ED3EE98A3DE0CB0E /* Foundation.framework */; };
+		1C36ED57E31CA172783699A9208D3311 /* BioAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F51CEFA63385DAC50CBB43B8E4E9E9D /* BioAuth-dummy.m */; };
+		25DF1556C03F8008976705D0B15E5E82 /* BioErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F695E2D3D2B2278659B747573750A /* BioErrors.swift */; };
+		2A9042C137DFE8244A43D0C8E6E495C0 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DAB6B64EE23F12CEBFDB282E4A4B78 /* LocalAuthentication.framework */; };
+		32623A49DC7978B9AF1D1ACCFD59EA23 /* BioAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = C58A227B568B337FA580BC548B498ED6 /* BioAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43529C0C386B1AC7B45DD513DD4A817A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD9D79231A21743ED3EE98A3DE0CB0E /* Foundation.framework */; };
+		958FFE94AA14E52A1DFE66A78AA65515 /* BioAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C2E6535A01AF21B67527FD2AA367D /* BioAuthenticator.swift */; };
+		A72954636383EDA982801E3088D55790 /* Pods-Sample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF50723EE695E440CDA214119EF2C70 /* Pods-Sample-dummy.m */; };
+		B68FB9F009BA9B0C2E586DFDC430C3F0 /* BioAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27DE30072489430D323546F4305E64B1 /* BioAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4EC5B6CB327BD0E6494A2170355AC5D /* BioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2EF7597D18879FEE6ED98DBFC7308 /* BioConstants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C19E866DCA1D871728918D84A2A80FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F47E933ADA7D023E9A7E463F0AFCA91D;
+			remoteInfo = BioAuth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		161FD1626938094EEC6BF57530EDB6DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202F695E2D3D2B2278659B747573750A /* BioErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BioErrors.swift; path = BioAuthenticator/BioErrors.swift; sourceTree = "<group>"; };
+		22DAB6B64EE23F12CEBFDB282E4A4B78 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/LocalAuthentication.framework; sourceTree = DEVELOPER_DIR; };
+		27DE30072489430D323546F4305E64B1 /* BioAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BioAuth-umbrella.h"; sourceTree = "<group>"; };
+		2FDF78216A41DB691C5960FEE69EB9FD /* Pods-Sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sample-resources.sh"; sourceTree = "<group>"; };
+		3AE375A74D27FC41E7BB6C006DFC76A6 /* Pods-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		4AF50723EE695E440CDA214119EF2C70 /* Pods-Sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sample-dummy.m"; sourceTree = "<group>"; };
+		4BD9D79231A21743ED3EE98A3DE0CB0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		630DD76D417453483F37DBAE838D5518 /* Pods-Sample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sample-umbrella.h"; sourceTree = "<group>"; };
+		660A96F98C542F98110BEAE54CA093C3 /* BioAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BioAuth-prefix.pch"; sourceTree = "<group>"; };
+		6B5C2E6535A01AF21B67527FD2AA367D /* BioAuthenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BioAuthenticator.swift; path = BioAuthenticator/BioAuthenticator.swift; sourceTree = "<group>"; };
+		6D65DC53E876D33B73CCFEE44C379EE1 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		72C277F867E671C8522E046B1E538D28 /* BioAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BioAuth.modulemap; sourceTree = "<group>"; };
+		735E5204C40E887244F2B75BCCDF2572 /* Pods-Sample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Sample.modulemap"; sourceTree = "<group>"; };
+		7F51CEFA63385DAC50CBB43B8E4E9E9D /* BioAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BioAuth-dummy.m"; sourceTree = "<group>"; };
+		928C76D507B01C3B300484A677874A48 /* BioAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BioAuth.framework; path = BioAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C896AB03AD02637A2108FF27D207683 /* Pods-Sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sample-frameworks.sh"; sourceTree = "<group>"; };
+		A21D9B3C2775E7C503E601A5737980FB /* Pods-Sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A4F67C9E66E8D9E97F11042B162517EB /* Pods-Sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sample-acknowledgements.plist"; sourceTree = "<group>"; };
+		C58A227B568B337FA580BC548B498ED6 /* BioAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BioAuth.h; path = BioAuthenticator/BioAuth.h; sourceTree = "<group>"; };
+		CE6656AE0E3E33278B141D36F476DFA7 /* Pods_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sample.framework; path = "Pods-Sample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6D8A3277D00EA9B51800DC7D0C37E48 /* BioAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BioAuth.xcconfig; sourceTree = "<group>"; };
+		EC6C7795801340214F41D24D2E5522B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F2EF7597D18879FEE6ED98DBFC7308 /* BioConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BioConstants.swift; path = BioAuthenticator/BioConstants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97C187E2DE46FA1FDD1CE8CDA8406991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43529C0C386B1AC7B45DD513DD4A817A /* Foundation.framework in Frameworks */,
+				2A9042C137DFE8244A43D0C8E6E495C0 /* LocalAuthentication.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F67A486438A72B7D62C2A87CE3A33D95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155DF5827AC23FABE88E931D8BE1AA5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EECA017DA54DAFED50F63A6855B88B1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4BD9D79231A21743ED3EE98A3DE0CB0E /* Foundation.framework */,
+				22DAB6B64EE23F12CEBFDB282E4A4B78 /* LocalAuthentication.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3CFE857706F66AC5DA72A6EED321DEF9 /* BioAuth */ = {
+			isa = PBXGroup;
+			children = (
+				C58A227B568B337FA580BC548B498ED6 /* BioAuth.h */,
+				6B5C2E6535A01AF21B67527FD2AA367D /* BioAuthenticator.swift */,
+				F4F2EF7597D18879FEE6ED98DBFC7308 /* BioConstants.swift */,
+				202F695E2D3D2B2278659B747573750A /* BioErrors.swift */,
+				B28511F25AD8F6CA2D1F7CDC2E2EB6EE /* Support Files */,
+			);
+			name = BioAuth;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EECA017DA54DAFED50F63A6855B88B1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63139B2F3C56D5FEE56339072CF6C606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				928C76D507B01C3B300484A677874A48 /* BioAuth.framework */,
+				CE6656AE0E3E33278B141D36F476DFA7 /* Pods_Sample.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		632F05ACF046C6876A4F0FDDBA93E23E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CFE857706F66AC5DA72A6EED321DEF9 /* BioAuth */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				632F05ACF046C6876A4F0FDDBA93E23E /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				63139B2F3C56D5FEE56339072CF6C606 /* Products */,
+				A8614ADDDA2C845A05B4D5D16AB12C48 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A8614ADDDA2C845A05B4D5D16AB12C48 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF5639CAB18577B4EDAE07E0E34E188C /* Pods-Sample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B28511F25AD8F6CA2D1F7CDC2E2EB6EE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72C277F867E671C8522E046B1E538D28 /* BioAuth.modulemap */,
+				E6D8A3277D00EA9B51800DC7D0C37E48 /* BioAuth.xcconfig */,
+				7F51CEFA63385DAC50CBB43B8E4E9E9D /* BioAuth-dummy.m */,
+				660A96F98C542F98110BEAE54CA093C3 /* BioAuth-prefix.pch */,
+				27DE30072489430D323546F4305E64B1 /* BioAuth-umbrella.h */,
+				EC6C7795801340214F41D24D2E5522B3 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Sample/Pods/Target Support Files/BioAuth";
+			sourceTree = "<group>";
+		};
+		BF5639CAB18577B4EDAE07E0E34E188C /* Pods-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				161FD1626938094EEC6BF57530EDB6DA /* Info.plist */,
+				735E5204C40E887244F2B75BCCDF2572 /* Pods-Sample.modulemap */,
+				A21D9B3C2775E7C503E601A5737980FB /* Pods-Sample-acknowledgements.markdown */,
+				A4F67C9E66E8D9E97F11042B162517EB /* Pods-Sample-acknowledgements.plist */,
+				4AF50723EE695E440CDA214119EF2C70 /* Pods-Sample-dummy.m */,
+				9C896AB03AD02637A2108FF27D207683 /* Pods-Sample-frameworks.sh */,
+				2FDF78216A41DB691C5960FEE69EB9FD /* Pods-Sample-resources.sh */,
+				630DD76D417453483F37DBAE838D5518 /* Pods-Sample-umbrella.h */,
+				3AE375A74D27FC41E7BB6C006DFC76A6 /* Pods-Sample.debug.xcconfig */,
+				6D65DC53E876D33B73CCFEE44C379EE1 /* Pods-Sample.release.xcconfig */,
+			);
+			name = "Pods-Sample";
+			path = "Target Support Files/Pods-Sample";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3164CDAB660E6BEC6D3D567CD2349AE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68FB9F009BA9B0C2E586DFDC430C3F0 /* BioAuth-umbrella.h in Headers */,
+				32623A49DC7978B9AF1D1ACCFD59EA23 /* BioAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECEE2A14BDFDC80FDD91CC4B0B88D27 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0515240BAD322C83CF9782DA4346EC24 /* Pods-Sample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1ADDDC080D5D2AB41CB870653C2B3F68 /* Pods-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 375663764F6BA08EABCE182B4BF75415 /* Build configuration list for PBXNativeTarget "Pods-Sample" */;
+			buildPhases = (
+				CFB54DC06A8C9A4E7D29B24B64493006 /* Sources */,
+				F67A486438A72B7D62C2A87CE3A33D95 /* Frameworks */,
+				CECEE2A14BDFDC80FDD91CC4B0B88D27 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D4A37C64B37E7CC3A829A94A95B2454 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sample";
+			productName = "Pods-Sample";
+			productReference = CE6656AE0E3E33278B141D36F476DFA7 /* Pods_Sample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F47E933ADA7D023E9A7E463F0AFCA91D /* BioAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53E9FEF32C2FCC25AA074A3E0365667A /* Build configuration list for PBXNativeTarget "BioAuth" */;
+			buildPhases = (
+				E5B050F84E16288A06B178087A6C0E68 /* Sources */,
+				97C187E2DE46FA1FDD1CE8CDA8406991 /* Frameworks */,
+				3164CDAB660E6BEC6D3D567CD2349AE6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BioAuth;
+			productName = BioAuth;
+			productReference = 928C76D507B01C3B300484A677874A48 /* BioAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 63139B2F3C56D5FEE56339072CF6C606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F47E933ADA7D023E9A7E463F0AFCA91D /* BioAuth */,
+				1ADDDC080D5D2AB41CB870653C2B3F68 /* Pods-Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFB54DC06A8C9A4E7D29B24B64493006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72954636383EDA982801E3088D55790 /* Pods-Sample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B050F84E16288A06B178087A6C0E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C36ED57E31CA172783699A9208D3311 /* BioAuth-dummy.m in Sources */,
+				958FFE94AA14E52A1DFE66A78AA65515 /* BioAuthenticator.swift in Sources */,
+				E4EC5B6CB327BD0E6494A2170355AC5D /* BioConstants.swift in Sources */,
+				25DF1556C03F8008976705D0B15E5E82 /* BioErrors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D4A37C64B37E7CC3A829A94A95B2454 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BioAuth;
+			target = F47E933ADA7D023E9A7E463F0AFCA91D /* BioAuth */;
+			targetProxy = 8C19E866DCA1D871728918D84A2A80FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		273BA1A923A233E9D8B193316E0A7049 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D65DC53E876D33B73CCFEE44C379EE1 /* Pods-Sample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sample/Pods-Sample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2ABD10CE08227F3FE1283F06D9E84135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE375A74D27FC41E7BB6C006DFC76A6 /* Pods-Sample.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sample/Pods-Sample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		361F338856A1AAB4D8B92E03D48EF9A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D8A3277D00EA9B51800DC7D0C37E48 /* BioAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BioAuth/BioAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BioAuth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BioAuth/BioAuth.modulemap";
+				PRODUCT_NAME = BioAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39C5BC78A31CDE101068C530CAC7FA0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5C9DCB89B6863670744F0A1979842CEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D8A3277D00EA9B51800DC7D0C37E48 /* BioAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BioAuth/BioAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BioAuth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BioAuth/BioAuth.modulemap";
+				PRODUCT_NAME = BioAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39C5BC78A31CDE101068C530CAC7FA0F /* Debug */,
+				89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		375663764F6BA08EABCE182B4BF75415 /* Build configuration list for PBXNativeTarget "Pods-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABD10CE08227F3FE1283F06D9E84135 /* Debug */,
+				273BA1A923A233E9D8B193316E0A7049 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53E9FEF32C2FCC25AA074A3E0365667A /* Build configuration list for PBXNativeTarget "BioAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C9DCB89B6863670744F0A1979842CEA /* Debug */,
+				361F338856A1AAB4D8B92E03D48EF9A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

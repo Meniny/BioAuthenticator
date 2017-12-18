@@ -2,7 +2,7 @@
 <p align="center">
   <!-- <img src="https://ooo.0o0.ooo/2017/04/23/58fc5b40945aa.png" alt="BioAuth"> -->
   <br/><a href="https://cocoapods.org/pods/BioAuth">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-brightgreen.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-brightgreen.svg">
   <img alt="Author" src="https://img.shields.io/badge/author-Meniny-blue.svg">
   <img alt="Build Passing" src="https://img.shields.io/badge/build-passing-brightgreen.svg">
   <img alt="Swift" src="https://img.shields.io/badge/swift-4.0%2B-orange.svg">
@@ -32,6 +32,7 @@
 #### CocoaPods
 
 ```ruby
+use_frameworks!
 pod 'BioAuth'
 ```
 
